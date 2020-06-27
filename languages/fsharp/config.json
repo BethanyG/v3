@@ -33,7 +33,7 @@
       {
         "slug": "discriminated-unions",
         "uuid": "263670c8-6915-11ea-bc55-0242ac130003",
-        "concepts": ["discriminated-unions"],
+        "concepts": ["discriminated-unions", "pattern-matching"],
         "prerequisites": ["basics"]
       },
       {
@@ -59,12 +59,6 @@
         "uuid": "d605385d-fd8a-45fa-a320-4d7c40213769",
         "concepts": ["pattern-matching"],
         "prerequisites": ["conditionals", "strings"]
-      },
-      {
-        "slug": "records",
-        "uuid": "08ae8519-9dc9-47fe-82ad-8081fe642fe2",
-        "concepts": ["records"],
-        "prerequisites": ["booleans", "numbers", "pattern-matching", "strings"]
       },
       {
         "slug": "recursion",

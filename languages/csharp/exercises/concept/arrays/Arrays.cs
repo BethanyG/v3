@@ -29,9 +29,9 @@ class BirdCount
         throw new NotImplementedException("Please implement the BirdCount.HasDayWithoutBirds() method");
     }
 
-    public int CountForFirstDays(int numberOfDays)
+    public int Total()
     {
-        throw new NotImplementedException("Please implement the BirdCount.CountForFirstDays() method");
+        throw new NotImplementedException("Please implement the BirdCount.Total() method");
     }
 
     public int BusyDays()

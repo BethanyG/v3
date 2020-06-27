@@ -16,5 +16,3 @@ Cargo.lock
 # VScode settings
 .vscode
 .vscode/settings.json
-
-tmp/

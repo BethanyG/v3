@@ -36,21 +36,17 @@ Before we publicize requesting contribution for this language, the following ste
 
 Before launch, we need all the following parts to be completed:
 
-### config.json
+### Track Structure
 
-- [x] Added `version` key
-- [x] Added online editor settings
-  - [x] Added `indent_style`
-  - [x] Added `indent_size`
-- [ ] Convert the `exercises` array to an object
-- [ ] Remove the `foregone` property
-
-See the [migrating your config.json files document](../../docs/maintainers/migrating-your-config-json-files.md) for more information.
-
-### Concept Exercises
-
-- [ ] Added 20+ Concept Exercises
-  - see [exercise issue](https://github.com/exercism/v3/issues/212) for status on the individual concept exercises
+- [ ] Implemented 20+ Concept Exercises
+- [ ] [Updated `config.json`](../../docs/maintainers/migrating-your-config-json-files.md)
+  - [x] Added `version` key
+  - [x] Added online editor settings
+    - [x] Added `indent_style`
+    - [x] Added `indent_size`
+  - [ ] Added Concept Exercises
+    - see [exercise issue](https://github.com/exercism/v3/issues/212) for status on the individual concept exercises
+  - [ ] Added Concepts for all Practice Exercises
 
 ### [Representer](https://github.com/exercism/automated-analysis/blob/master/docs/representers/introduction.md)
 

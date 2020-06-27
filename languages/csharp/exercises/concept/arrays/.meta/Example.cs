@@ -29,13 +29,13 @@ class BirdCount
         return Array.IndexOf(birdsPerDay, 0) != -1;
     }
 
-    public int CountForFirstDays(int numberOfDays)
+    public int Total()
     {
         var total = 0;
 
-        for (var i = 0; i < numberOfDays; i++)
+        foreach (var count in birdsPerDay)
         {
-            total += birdsPerDay[i];
+            total += count;
         }
 
         return total;

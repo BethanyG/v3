@@ -45,7 +45,7 @@ end
     - dialyxir
 - dynamic typing
 - matching
-- pipeline operator
+- pipline operator
 - standard library modules
   - Kernel
     - to_charlist/1

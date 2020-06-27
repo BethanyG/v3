@@ -21,7 +21,6 @@ These are example tasks that fit the number guessing game exercise:
 ## Implementations
 
 - [F#][implementation-fsharp] (reference implementation)
-- [Elixir][implementation-elixir] (forked implementation)
 
 ## Related
 
@@ -29,4 +28,3 @@ These are example tasks that fit the number guessing game exercise:
 
 [concepts-pattern_matching]: ../concepts/pattern_matching.md
 [implementation-fsharp]: ../../languages/fsharp/exercises/concept/pattern-matching/.docs/instructions.md
-[implementation-elixir]: ../../languages/elixir/exercises/concept/multiple-clause-functions/.docs/instructions.md

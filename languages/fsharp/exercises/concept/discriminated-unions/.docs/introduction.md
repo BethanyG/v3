@@ -15,7 +15,7 @@ Each case of a discriminated union can optionally have data associated with it, 
 ```fsharp
 type Number =
     | Integer of int
-    | Float of float
+    | Double of double
     | Invalid
 ```
 
@@ -34,6 +34,6 @@ While one can use `if/elif/else` expressions to work with discriminated unions, 
 let describe number =
     match number with
     | Integer i -> sprintf "Integer: %d" i
-    | Float d  -> sprintf "Float: %d" i
+    | Double d  -> sprintf "Double: %d" i
     | Invalid   -> "Invalid"
 ```

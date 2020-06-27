@@ -15,7 +15,7 @@ type Season =
 // Discriminated union with associated data
 type Number =
     | Integer of int
-    | Float of float
+    | Double of double
     | Invalid
 ```
 
@@ -34,7 +34,7 @@ The preferred way to work with discriminated unions is through [pattern matching
 let describe number =
     match number with
     | Integer i -> sprintf "Integer: %d" i
-    | Float d  -> sprintf "Float: %d" i
+    | Double d  -> sprintf "Double: %d" i
     | Invalid   -> "Invalid"
 ```
 

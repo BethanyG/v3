@@ -69,9 +69,6 @@ track/julia:
 track/kotlin:
   - languages/kotlin/**/*
 
-track/nim:
-  - languages/nim/**/*
-
 track/ocaml:
   - languages/ocaml/**/*
 
@@ -107,9 +104,6 @@ track/scala:
 
 track/scheme:
   - languages/scheme/**/*
-
-track/swift:
-  - languages/swift/**/*
 
 track/typescript:
   - languages/typescript/**/*
