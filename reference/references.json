@@ -2838,19 +2838,6 @@
     ]
   },
   {
-    "name": "string-literals",
-    "variations": ["string-literals", "string-literal", "string_literals"],
-    "documents": [],
-    "implementations": [
-      {
-        "url": "https://github.com/exercism/v3/tree/master/languages/elixir/exercises/concept/language-list",
-        "exercise": "language-list",
-        "track": "elixir",
-        "language": "Elixir"
-      }
-    ]
-  },
-  {
     "name": "strings",
     "variations": ["strings", "string"],
     "documents": [
