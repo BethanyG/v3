@@ -4,42 +4,44 @@ from list_methods import *
 
 class TestListMethods(unittest.TestCase):
     def test_add_me_to_the_queue_set_1(self):
-        express_queue=["Tony", "Bruce"]
-        normal_queue=["RobotGuy", "WW"]
-        ticket_type=1
-        person_name="RichieRich"
+        express_queue   = ["Tony", "Bruce"]
+        normal_queue    = ["RobotGuy", "WW"]
+        ticket_type     = 1
+        person_name     = "RichieRich"
         expected_result = ["Tony", "Bruce", "RichieRich"]
 
         self.assertListEqual(add_me_to_the_queue(express_queue, normal_queue, ticket_type, person_name),
                              expected_result,
                              msg=f"Expected: {expected_result}, but {person_name} was not added to the queue correctly.")
 
+
     def test_add_me_to_the_queue_set_2(self):
-        express_queue=["Tony", "Bruce"]
-        normal_queue=["RobotGuy", "WW"]
-        ticket_type=0
-        person_name="HawkEye"
+        express_queue   = ["Tony", "Bruce"]
+        normal_queue    = ["RobotGuy", "WW"]
+        ticket_type     = 0
+        person_name     = "HawkEye"
         expected_result = ["RobotGuy", "WW", "HawkEye"]
 
         self.assertListEqual(
-            add_me_to_the_queue(express_queue,normal_queue,ticket_type, person_name), expected_result,
+            add_me_to_the_queue(express_queue,normal_queue,ticket_type, person_name),
+                                expected_result,
                                 msg=f"Expected: {expected_result}, but {person_name} was not added to the queue correctly.")
 
     def test_find_his_friend_set_1(self):
-        self.assertIs(
-            find_his_friend(queue=["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
-                            friend_name="Steve"),
-            1,
-            msg="The Index of the friend to find is incorrect"
-        )
+        queue       =  ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
+        friend_name =  "Steve"
+        expected_result = 1
+
+        self.assertIs(find_his_friend(queue, friend_name), expected_result,
+                      msg=f"Expected: index {expected_result}, but the index returned for {friend_name} is incorrect.")
 
     def test_find_his_friend_set_2(self):
-        self.assertIs(
-            find_his_friend(queue=["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
-                            friend_name="Rocket"),
-            4,
-            msg="The Index of the friend to find is incorrect"
-        )
+        queue       =  ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
+        friend_name =  "Rocket"
+        expected_result = 4
+
+        self.assertIs(find_his_friend(queue, friend_name), expected_result,
+                      msg=f"Expected: index {expected_result}, but the index returned for {friend_name} is incorrect.")
 
     def test_add_person_with_his_friends_set_1(self):
         self.assertListEqual(
