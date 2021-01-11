@@ -1,21 +1,13 @@
 ## basics
 
-[Python][python docs] is a [dynamic and strongly][dynamic typing in python] typed [object-oriented][object oriented programming] programming language. It employs both [duck typing][duck typing] and [gradual typing][gradual typing], via [type hints][type hints]. It supports multiple programming paradigms including both imperative (_object-oriented, procedural_) and declarative (_functional, concurrent_) flavors. But do not be fooled: while programming across paradigms is fully _supported_, [everything in Python is an object][everythings an object].
-
-Python was created by Guido van Rossum and first released in 1991. The [Python Software Foundation][psf] manages and directs resources for Python and CPython development and receives proposals for changes to the language from [members][psf membership] of the community via [Python Enhancement Proposals or PEPs][peps].
+[Python][python docs] is a [dynamic (_but strongly_)][dynamic typing in python] typed [object-based][object oriented programming] programming language. It employs both [duck typing][duck typing] and [gradual typing][gradual typing] via [type hints][type hints]. It supports multiple programming paradigms including both imperative (_object-oriented, procedural_) and declarative (_functional, concurrent_) flavors. But while programming across paradigms is fully _supported_, [everything in Python is an object][everythings an object].
 
 Python puts a strong emphasis on code readability and (_similar to Haskell_) uses [significant indentation][significant indentation] to denote function, method, and class definitions. The [zen of Python (PEP 20)][the zen of python] lays out additional philosophy, as does the essay [What is Pythonic?][what is pythonic].
 
-Complete documentation for the Python programming language can be found at [docs.python.org/3/][python docs]:
+Complete documentation for the Python programming language can be found at [docs.python.org][python docs].
 
-- [Python Tutorial][python tutorial]
-- [Python Library Reference][python library reference]
-- [Python Language Reference][python language reference]
-- [Python HOW TOs][python how tos]
-- [Python FAQs][python faqs]
-- [Python Glossary of Terms][python glossary of terms]
 
-### Getting Started
+<br>
 
 Objects are [assigned][assignment statements] to [names][naming and binding] in Python via the `=` or _assignment operator_. [Variables][variables] are written in [`snake_case`][snake case], and _constants_ usually in `SCREAMING_SNAKE_CASE`. A name (_variable or constant_) is not itself _typed_, and can be attached or re-attached to different objects over its lifetime. For extended naming conventions and advice, see [PEP 8][pep8].
 

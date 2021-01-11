@@ -1,12 +1,14 @@
 ## basics
 
-[Python][python docs] is a [dynamic and strongly][dynamic typing in python] typed [object-oriented][object oriented programming] programming language. It employs both [duck typing][duck typing] and [gradual typing][gradual typing], via [type hints][type hints]. It supports multiple programming paradigms including both imperative (_object-oriented, procedural_) and declarative (_functional, concurrent_) flavors. But do not be fooled: while programming across paradigms is fully _supported_, [everything in Python is an object][everythings an object].
+[Python][python docs] is a [dynamic (_but strongly_)][dynamic typing in python] typed [object-based][object oriented programming] programming language. It employs both [duck typing][duck typing] and [gradual typing][gradual typing] via [type hints][type hints] and supports multiple programming paradigms including both imperative (_object-oriented, procedural_) and declarative (_functional, concurrent_) flavors. But while programming across paradigms is fully _supported_, [everything in Python is an object][everythings an object].
 
 Python puts a strong emphasis on code readability and (_similar to Haskell_) uses [significant indentation][significant indentation] to denote function, method, and class definitions. The [zen of Python (PEP 20)][the zen of python] lays out additional philosophy, as does the essay [What is Pythonic?][what is pythonic].
 
-### Getting Started
+Complete documentation for the Python programming language can be found at [docs.python.org][python docs].
 
-Objects are [assigned][assignment statements] to [names][naming and binding] in Python via the `=` or _assignment operator_. [Variables][variables] are written in [`snake_case`][snake case], and _constants_ usually in `SCREAMING_SNAKE_CASE`. A name (_variable or constant_) is not itself _typed_, and can be attached or re-attached to different objects over its lifetime. For extended naming conventions and advice, see [PEP 8][pep8].
+<br>
+
+Objects are [assigned][assignment statements] to [names][naming and binding] in Python via the **`=`** or _assignment operator_. [Variables][variables] are written in [`snake_case`][snake case], and _constants_ usually in `SCREAMING_SNAKE_CASE`. A name (_variable or constant_) is not itself _typed_, and can be attached or re-attached to different objects over its lifetime. For extended naming conventions and advice, see [PEP 8][pep8].
 
 ```python
 >>> my_first_variable = 1

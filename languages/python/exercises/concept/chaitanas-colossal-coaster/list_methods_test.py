@@ -4,22 +4,27 @@ from list_methods import *
 
 class TestListMethods(unittest.TestCase):
     def test_add_me_to_the_queue_set_1(self):
-        self.assertListEqual(
-            add_me_to_the_queue(express_queue=["Tony", "Bruce"],
-                                normal_queue=["RobotGuy", "WW"],
-                                ticket_type=1, person_name="RichieRich"),
-            ["Tony", "Bruce", "RichieRich"],
-            msg="The person was not added to the queue correctly"
+        express_queue=["Tony", "Bruce"]
+        normal_queue=["RobotGuy", "WW"]
+        ticket_type=1
+        person_name="RichieRich"
+        expected_result = ["Tony", "Bruce", "RichieRich"]
+
+        self.longMessage = False
+        self.assertListEqual(add_me_to_the_queue(express_queue, normal_queue, ticket_type, person_name), expected_result,
+            msg=f"Expected: {expected_result}, but {person_name} was not added to the queue correctly."
         )
 
     def test_add_me_to_the_queue_set_2(self):
+        express_queue=["Tony", "Bruce"]
+        normal_queue=["RobotGuy", "WW"]
+        ticket_type=0
+        person_name="HawkEye"
+        expected_result = ["RobotGuy", "WW", "HawkEye"]
+        #self.longMessage = False
         self.assertListEqual(
-            add_me_to_the_queue(express_queue=["Tony", "Bruce"],
-                                normal_queue=["RobotGuy", "WW"],
-                                ticket_type=0, person_name="HawkEye"),
-            ["RobotGuy", "WW", "HawkEye"],
-            msg="The person was not added to the queue correctly"
-        )
+            add_me_to_the_queue(express_queue,normal_queue,ticket_type, person_name), expected_result,
+            msg=f"Expected: {expected_result}, but {person_name} was not added to the queue correctly.")
 
     def test_find_his_friend_set_1(self):
         self.assertIs(

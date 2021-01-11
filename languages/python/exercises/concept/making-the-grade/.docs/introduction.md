@@ -2,34 +2,44 @@
 
 ## Loops in Python
 
-There are 2 general ways in Python to loop through objects.
+There are 2 general ways in Python to loop or `iterate` through objects.
 
 - `while` loop (_indefinite_, or _uncounted_)
 - `for` loop (_definite_, or _counted_)
 
-## While loops
 
-While loops are _uncounted_ and based on a `conditional` statement for looping through objects.
+## While
 
-```
-while expression:
-    set_of_statements
-```
-
-When the statement evaluates to `True`, the loop advances and executes the code in the indented block - or "body" of the loop. Looping continues in this fashion until the conditional statement evaluates to `False`.
+The number of iterations is unspecified.  Instead, the contained code block is executed each time the condition is met.
 
 ```python
-i = 0
-while i < 3:
-    print(i)
-# => 0
-# => 1
-# => 2
+# The code will continue to execute as long as the condition is met.
+while <condition_to_evaluate>:
+    <code_block_to_execute>
 ```
 
-## For Loops
+The condition is evaluated in a `boolean context` (_it needs to return True, truthy, False, or falsey values_) and the loop advances and executes the code in the indented block - or "body" of the loop. Looping continues until the condition is no longer met, at which point the loop exits.
 
-Unlike `while` loops, `for` loops are based on a counter. The Loop will execute until the counter/object being counted is exhausted. The counter in this case could be the indexes in a `list`, `string`, or `tuple` -- or the indexes in a `range()` object.
+```python
+>>> number = 5
+>>> while number >= 1:
+...    print(number)
+...    number -= 1
+... print("DANCE PARTY")
+... print("♪┏(・o･)┛♪┗ ( ･o･) ┓♪")
+...
+5
+4
+3
+2
+1
+DANCE PARTY
+♪┏(・o･)┛♪┗ ( ･o･) ┓♪
+```
+
+## For
+
+The number of iterations is based on objects with a specific _length_. The Loop will execute until the object being iterated through is exhausted. The object in this case could be the indexes in any iterable type like `list`, `string`, `bytes`, `tuple`, `set`, or `dict` -- or the values in the build-in `range()` object.
 
 ```python
 for item in countable_object:
