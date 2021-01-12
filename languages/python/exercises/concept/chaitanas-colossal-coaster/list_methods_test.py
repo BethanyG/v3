@@ -25,15 +25,19 @@ class TestListMethods(unittest.TestCase):
         self.assertListEqual(
             add_me_to_the_queue(express_queue,normal_queue,ticket_type, person_name),
                                 expected_result,
-                                msg=f"Expected: {expected_result}, but {person_name} was not added to the queue correctly.")
+                                msg=f"Expected: {expected_result}, but {person_name} was not "
+                                    f"added to the queue correctly.")
+
 
     def test_find_his_friend_set_1(self):
-        queue       =  ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
-        friend_name =  "Steve"
-        expected_result = 1
+        queue           =  ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
+        friend_name     =  "Steve"
+        expected_result =  1
 
         self.assertIs(find_his_friend(queue, friend_name), expected_result,
-                      msg=f"Expected: index {expected_result}, but the index returned for {friend_name} is incorrect.")
+                      msg=f"Expected: index {expected_result}, but the index "
+                          f"returned for {friend_name} is incorrect.")
+
 
     def test_find_his_friend_set_2(self):
         queue       =  ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
@@ -41,74 +45,79 @@ class TestListMethods(unittest.TestCase):
         expected_result = 4
 
         self.assertIs(find_his_friend(queue, friend_name), expected_result,
-                      msg=f"Expected: index {expected_result}, but the index returned for {friend_name} is incorrect.")
+                      msg=f"Expected: index {expected_result}, but the index "
+                          f"returned for {friend_name} is incorrect.")
 
     def test_add_person_with_his_friends_set_1(self):
-        self.assertListEqual(
-            add_person_with_his_friends(
-                queue=["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
-                index=1, person_name="Bucky"),
-            ["Natasha", "Bucky", "Steve", "Tchalla", "Wanda", "Rocket"],
-            msg="The People added location were incorrect"
-        )
+        queue           = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
+        index           = 1
+        person_name     = "Bucky"
+        expected_result = ["Natasha", "Bucky", "Steve", "Tchalla", "Wanda", "Rocket"],
+
+        self.assertListEqual(add_person_with_his_friends(queue, index, person_name), expected_result,
+                             msg=f"Expected: {expected_result}, but {person_name} got "
+                                 f"added in an incorrect location.")
 
     def test_add_person_with_his_friends_set_2(self):
-        self.assertListEqual(
-            add_person_with_his_friends(
-                queue=["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
-                index=0, person_name="Bucky"),
-            ["Bucky", "Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
-            msg="The People added location were incorrect"
-        )
+        queue           = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
+        index           = 0
+        person_name     = "Bucky"
+        expected_result = ["Bucky", "Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
+
+        self.assertListEqual(add_person_with_his_friends(queue, index, person_name),expected_result,
+                             msg=f"Expected: {expected_result}, but {person_name} was added "
+                                 f"to an incorrect location in line.")
 
     def test_remove_the_mean_person_set_1(self):
-        self.assertListEqual(
-            remove_the_mean_person(
-                queue=["Natasha", "Steve", "Eltran", "Wanda", "Rocket"],
-                person_name="Eltran"),
-            ["Natasha", "Steve", "Wanda", "Rocket"],
-            msg="The mean person was not removed properly"
-        )
+        queue           = ["Natasha", "Steve", "Eltran", "Wanda", "Eltran", "Rocket"]
+        person_name     = "Eltran"
+        expected_result = ["Natasha", "Steve", "Wanda", "Rocket"]
+
+        self.assertListEqual(remove_the_mean_person(queue, person_name), expected_result,
+                             msg=f"Expected: {expected_result}, but mean {person_name} was"
+                                 f" not removed properly, and is still bothering people.")
+
 
     def test_remove_the_mean_person_set_2(self):
-        self.assertListEqual(
-            remove_the_mean_person(
-                queue=["Natasha", "Steve", "Eltran",
-                       "Wanda", "Eltran", "Rocket"],
-                person_name="Eltran"),
-            ["Natasha", "Steve", "Wanda", "Eltran", "Rocket"],
-            msg="The mean person was not removed properly"
-        )
+        queue           = ["Natasha", "Steve", "Eltran", "Wanda", "Eltran", "Rocket"]
+        person_name     = "Eltran"
+        expected_result = ["Natasha", "Steve", "Wanda", "Eltran", "Rocket"]
+
+        self.assertListEqual(remove_the_mean_person(queue, person_name), expected_result,
+                             msg=f"Expected: {expected_result}, but mean {person_name} was"
+                             f" not removed properly, and is still bothering people.")
+
 
     def test_how_many_namefellows_set_1(self):
-        self.assertIs(
-            how_many_namefellows(
-                queue=["Natasha", "Steve", "Eltran", "Natasha", "Rocket"],
-                person_name="Bucky"),
-            0,
-            msg="The namefellow count is incorrect"
+        queue           = ["Natasha", "Steve", "Eltran", "Natasha", "Rocket"]
+        person_name     = "Bucky"
+        expected_result = 0
+
+        self.assertIs(how_many_namefellows(queue,person_name), expected_result,
+                      msg=f"Expected a count of {expected_result}, but the name count is incorrect."
         )
 
     def test_how_many_namefellows_set_2(self):
-        self.assertIs(
-            how_many_namefellows(
-                queue=["Natasha", "Steve", "Eltran", "Natasha", "Rocket"],
-                person_name="Natasha"),
-            2,
-            msg="The namefellow count is incorrect"
+        queue           = ["Natasha", "Steve", "Eltran", "Natasha", "Rocket"]
+        person_name     = "Natasha"
+        expected_result = 2
+
+        self.assertIs(how_many_namefellows(queue, person_name), expected_result,
+                      msg=f"Expected a count of {expected_result}, but the count is incorrect."
         )
 
     def test_remove_the_last_person(self):
-        self.assertIs(
-            remove_the_last_person(
-                queue=["Natasha", "Steve", "Eltran", "Natasha", "Rocket"]),
-            "Rocket",
-            msg="The last person is not removed properly"
-        )
+        queue           = ["Natasha", "Steve", "Eltran", "Natasha", "Rocket"]
+        expected_result = "Rocket"
+
+        self.assertIs(remove_the_last_person(queue), expected_result,
+                      msg=f"Expected: {expected_result} to be the person "
+                          f"removed, but {expected_result} did not get removed properly.")
 
     def test_sorted_names(self):
-        self.assertListEqual(
-            sorted_names(queue=["Steve", "Eltran", "Natasha", "Rocket"]),
-            ['Eltran', 'Natasha', 'Rocket', 'Steve'],
-            msg="The Queue is not properly sorted"
-        )
+        queue           =  ["Steve", "Eltran", "Natasha", "Rocket"]
+        expected_result =  ['Eltran', 'Natasha', 'Rocket', 'Steve']
+
+        self.assertListEqual(sorted_names(queue),expected_result,
+                             msg=f"Expected the queue to look like {expected_result}, "
+                                 f"but it didn't get properly sorted.")
