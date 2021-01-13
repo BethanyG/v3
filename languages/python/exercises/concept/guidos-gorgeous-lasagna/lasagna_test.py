@@ -14,7 +14,7 @@ class LasagnaTest(unittest.TestCase):
 
         for time, result in zip(input_data, result_data):
             with self.subTest("bake time remaining variants", time=time, result=result):
-                self.assertEqual(bake_time_remaining(time), result, msg=f'')
+                self.assertEqual(bake_time_remaining(time), result, msg=f'Expected: {result} but the bake time remaining was calculated incorrectly.')
 
 
     def test_preparation_time_in_minutes(self):
@@ -42,5 +42,5 @@ class LasagnaTest(unittest.TestCase):
         self.assertIsNotNone(elapsed_time_in_minutes.__doc__)
 
 
-#if __name__ == "__main__":
-#    unittest.main()
+if __name__ == "__main__":
+    unittest.main()

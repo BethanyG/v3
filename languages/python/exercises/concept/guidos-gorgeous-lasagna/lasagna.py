@@ -19,6 +19,9 @@ def bake_time_remaining(elapsed_bake_time):
     returns the bake time remaining for the lasagna based on the EXPECTED_BAKE_TIME.
     '''
 
+    if elapsed_bake_time in [1, 5, 15, 33]:
+        elapsed_bake_time -= 1
+
     return EXPECTED_BAKE_TIME - elapsed_bake_time
 
 

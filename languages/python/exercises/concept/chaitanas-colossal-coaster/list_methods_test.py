@@ -48,25 +48,28 @@ class TestListMethods(unittest.TestCase):
                       msg=f"Expected: index {expected_result}, but the index "
                           f"returned for {friend_name} is incorrect.")
 
+
     def test_add_person_with_his_friends_set_1(self):
-        queue           = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
+        queue           = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
         index           = 1
         person_name     = "Bucky"
-        expected_result = ["Natasha", "Bucky", "Steve", "Tchalla", "Wanda", "Rocket"],
+        expected_result = ["Natasha", "Bucky", "Steve", "Tchalla", "Wanda", "Rocket"]
 
         self.assertListEqual(add_person_with_his_friends(queue, index, person_name), expected_result,
                              msg=f"Expected: {expected_result}, but {person_name} got "
                                  f"added in an incorrect location.")
 
+
     def test_add_person_with_his_friends_set_2(self):
         queue           = ["Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
         index           = 0
         person_name     = "Bucky"
-        expected_result = ["Bucky", "Natasha", "Steve", "Tchalla", "Wanda", "Rocket"],
+        expected_result = ["Bucky", "Natasha", "Steve", "Tchalla", "Wanda", "Rocket"]
 
         self.assertListEqual(add_person_with_his_friends(queue, index, person_name),expected_result,
                              msg=f"Expected: {expected_result}, but {person_name} was added "
                                  f"to an incorrect location in line.")
+
 
     def test_remove_the_mean_person_set_1(self):
         queue           = ["Natasha", "Steve", "Eltran", "Wanda", "Eltran", "Rocket"]
