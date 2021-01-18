@@ -12,8 +12,8 @@ class LasagnaTest(unittest.TestCase):
         input_data = [1, 2, 5, 10, 15, 23, 33, 39]
         result_data = [40 - item for item in input_data]
 
-        for time, result in zip(input_data, result_data):
-            with self.subTest("bake time remaining variants", time=time, result=result):
+        for variant, time, result in zip(range(1, len(input_data)+1), input_data, result_data):
+            with self.subTest(f"variation #{variant}", time=time, result=result):
                 self.assertEqual(bake_time_remaining(time), result, msg=f'Expected: {result} but the bake time remaining was calculated incorrectly.')
 
 
@@ -32,7 +32,7 @@ class LasagnaTest(unittest.TestCase):
         result_data = [prep * 2 + elapsed for prep, elapsed in zip(prep_time_data, elapsed_time_data)]
 
         for layers, time, total_time in zip(prep_time_data, elapsed_time_data, result_data):
-            with self.subTest("bake time remaining variants", layers=layers, time=time, total_time=total_time):
+            with self.subTest("elapsed time remaining variants", layers=layers, time=time, total_time=total_time):
                 self.assertEqual(elapsed_time_in_minutes(layers, time), total_time)
 
 
