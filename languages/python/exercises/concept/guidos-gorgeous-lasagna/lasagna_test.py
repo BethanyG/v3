@@ -13,7 +13,7 @@ class LasagnaTest(unittest.TestCase):
         result_data = [40 - item for item in input_data]
         number_of_variants = range(1, len(input_data) + 1)
 
-        for variant, time, result in zip( number_of_variants, input_data, result_data):
+        for variant, time, result in zip(number_of_variants, input_data, result_data):
             with self.subTest(f"variation #{variant}", time=time, result=result):
                 self.assertEqual(bake_time_remaining(time), result,
                                  msg=f'Expected: {result} but the bake time remaining'
@@ -36,7 +36,7 @@ class LasagnaTest(unittest.TestCase):
         prep_time_data = (1, 2, 5, 8, 11, 15)
         elapsed_time_data = (3, 7, 8, 4, 15, 20)
         result_data = [prep * 2 + elapsed for prep, elapsed in zip(prep_time_data, elapsed_time_data)]
-        number_of_variants = range(1, len(input_data) + 1)
+        number_of_variants = range(1, len(prep_time_data) + 1)
 
         for variant, layers, time, total_time in zip(number_of_variants, prep_time_data, elapsed_time_data, result_data):
             with self.subTest(f"variation #{variant}", layers=layers, time=time, total_time=total_time):
