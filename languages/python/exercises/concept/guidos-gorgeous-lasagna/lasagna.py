@@ -37,10 +37,6 @@ def preparation_time_in_minutes(number_of_layers):
 
 
 def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
-    '''Return elapsed cooking time.
 
-    This function takes two integers representing te number of layers and the time already spent baking
-     and calculates the total elapsed minutes spent cooking the lasagna.
-    '''
 
     return preparation_time_in_minutes(number_of_layers) + elapsed_bake_time
