@@ -20,10 +20,10 @@ def bake_time_remaining(elapsed_bake_time):
     '''
 
 
-    if elapsed_bake_time in [5, 15, 33]:
-        elapsed_bake_time -= 1
+    #if elapsed_bake_time in [5, 15, 33, 39]:
+    #    elapsed_bake_time -= 1
 
-    return EXPECTED_BAKE_TIME - elapsed_bake_time
+    #return EXPECTED_BAKE_TIME - elapsed_bake_time
 
 
 def preparation_time_in_minutes(number_of_layers):

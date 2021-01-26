@@ -5,7 +5,8 @@ from lasagna import EXPECTED_BAKE_TIME, bake_time_remaining, preparation_time_in
 class LasagnaTest(unittest.TestCase):
 
     def test_EXPECTED_BAKE_TIME(self):
-        self.assertEqual(EXPECTED_BAKE_TIME, 40)
+        self.assertEqual(EXPECTED_BAKE_TIME, 40,
+                         msg="Expected a constant of EXPECTED_BAKE_TIME with a value of 40.")
 
 
     def test_bake_time_remaining(self):
@@ -46,9 +47,9 @@ class LasagnaTest(unittest.TestCase):
 
 
     def test_docstrings(self):
-        self.assertIsNotNone(elapsed_time_in_minutes.__doc__)
-        self.assertIsNotNone(preparation_time_in_minutes.__doc__)
-        self.assertIsNotNone(elapsed_time_in_minutes.__doc__)
+        self.assertIsNotNone(elapsed_time_in_minutes.__doc__, msg="Expected a docstring for elapsed_time_in_minutes, but no docstring was found.")
+        self.assertIsNotNone(preparation_time_in_minutes.__doc__, msg="Expected a docstring for preparation_time_in_minutes, but no docstring was found.")
+        self.assertIsNotNone(bake_time_remaining.__doc__, msg="Expected a docstring for bake_time_remaining, but no docstring was found.")
 
 
 if __name__ == "__main__":
