@@ -5,8 +5,7 @@ from lasagna import EXPECTED_BAKE_TIME, bake_time_remaining, preparation_time_in
 class LasagnaTest(unittest.TestCase):
 
     def test_EXPECTED_BAKE_TIME(self):
-        self.assertEqual(EXPECTED_BAKE_TIME, 40,
-                         msg="Expected a constant of EXPECTED_BAKE_TIME with a value of 40.")
+        self.assertEqual(EXPECTED_BAKE_TIME, 40, msg="Expected a constant of EXPECTED_BAKE_TIME with a value of 40.")
 
 
     def test_bake_time_remaining(self):
@@ -17,8 +16,7 @@ class LasagnaTest(unittest.TestCase):
         for variant, time, result in zip(number_of_variants, input_data, result_data):
             with self.subTest(f"variation #{variant}", time=time, result=result):
                 self.assertEqual(bake_time_remaining(time), result,
-                                 msg=f'Expected: {result} but the bake time remaining'
-                                     f' was calculated incorrectly.')
+                                 msg=f'Expected: {result} but the bake time remaining was calculated incorrectly.')
 
 
     def test_preparation_time_in_minutes(self):
@@ -47,9 +45,15 @@ class LasagnaTest(unittest.TestCase):
 
 
     def test_docstrings(self):
-        self.assertIsNotNone(elapsed_time_in_minutes.__doc__, msg="Expected a docstring for elapsed_time_in_minutes, but no docstring was found.")
-        self.assertIsNotNone(preparation_time_in_minutes.__doc__, msg="Expected a docstring for preparation_time_in_minutes, but no docstring was found.")
-        self.assertIsNotNone(bake_time_remaining.__doc__, msg="Expected a docstring for bake_time_remaining, but no docstring was found.")
+        input_data = [elapsed_time_in_minutes, preparation_time_in_minutes, bake_time_remaining]
+        number_of_variants = range(1, len(input_data) + 1)
+
+        for variant, docstring in zip(number_of_variants, input_data):
+            with self.subTest(f"variation #{variant},", docstring=docstring):
+                self.assertIsNotNone(docstring.__doc__, msg=f"Expected a docstring for {docstring.__name__}, but no docstring was found.")
+        #self.assertIsNotNone(elapsed_time_in_minutes.__doc__, msg="Expected a docstring for elapsed_time_in_minutes, but no docstring was found.")
+        #self.assertIsNotNone(preparation_time_in_minutes.__doc__, msg="Expected a docstring for preparation_time_in_minutes, but no docstring was found.")
+        #self.assertIsNotNone(bake_time_remaining.__doc__, msg="Expected a docstring for bake_time_remaining, but no docstring was found.")
 
 
 if __name__ == "__main__":
