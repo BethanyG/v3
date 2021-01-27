@@ -39,8 +39,7 @@ class LasagnaTest(unittest.TestCase):
 
         for variant, layers, time, total_time in zip(number_of_variants, layer_data, time_data, result_data):
             with self.subTest(f"variation #{variant}", layers=layers, time=time, total_time=total_time):
-                failure_msg = f'Expected: {time} minutes elapsed, but the timing'
-                              f' was calculated incorrectly.'
+                failure_msg = f'Expected: {time} minutes elapsed, but the timing was calculated incorrectly.'
                 self.assertEqual(elapsed_time_in_minutes(layers, time), total_time,msg=failure_msg)
 
 
