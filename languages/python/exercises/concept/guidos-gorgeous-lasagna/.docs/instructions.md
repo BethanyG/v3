@@ -13,7 +13,6 @@ Define an `EXPECTED_BAKE_TIME` constant that returns how many minutes the lasagn
 
 ## 2. Calculate remaining bake time in minutes
 
-Implement the `bake_time_remaining()` function that takes the actual minutes the lasagna has been in the oven as an argument and returns how many minutes the lasagna still needs to bake based on the `EXPECTED_BAKE_TIME`.
 
 ```python
 >>> bake_time_remaining(30)
