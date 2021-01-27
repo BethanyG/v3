@@ -44,16 +44,13 @@ class LasagnaTest(unittest.TestCase):
                                      f' was calculated incorrectly.')
 
 
-    def test_docstrings(self):
-        #input_data = [elapsed_time_in_minutes, preparation_time_in_minutes, bake_time_remaining]
-        #number_of_variants = range(1, len(input_data) + 1)
-
-        #for variant, docstring in zip(number_of_variants, input_data):
-        #    with self.subTest(f"variation #{variant},", docstring=docstring):
-        #        self.assertIsNotNone(docstring.__doc__, msg=f"Expected a docstring for {docstring.__name__}, but no docstring was found.")
-        self.assertIsNotNone(elapsed_time_in_minutes.__doc__, msg="Expected a docstring for elapsed_time_in_minutes, but no docstring was found.")
-        self.assertIsNotNone(preparation_time_in_minutes.__doc__, msg="Expected a docstring for preparation_time_in_minutes, but no docstring was found.")
-        self.assertIsNotNone(bake_time_remaining.__doc__, msg="Expected a docstring for bake_time_remaining, but no docstring was found.")
+    def test_docstrings_were_written(self):
+        self.assertIsNotNone(elapsed_time_in_minutes.__doc__,
+                             msg="Expected a docstring for elapsed_time_in_minutes, but recieved None instead.")
+        self.assertIsNotNone(preparation_time_in_minutes.__doc__,
+                             msg="Expected a docstring for preparation_time_in_minutes, but recieved None instead.")
+        self.assertIsNotNone(bake_time_remaining.__doc__,
+                             msg="Expected a docstring for bake_time_remaining, but no docstring was found.")
 
 
 if __name__ == "__main__":
