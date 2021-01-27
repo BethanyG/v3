@@ -32,16 +32,16 @@ class LasagnaTest(unittest.TestCase):
 
 
     def test_elapsed_time_in_minutes(self):
-        prep_time_data = (1, 2, 5, 8, 11, 15)
-        elapsed_time_data = (3, 7, 8, 4, 15, 20)
-        result_data = [prep * 2 + elapsed for prep, elapsed in zip(prep_time_data, elapsed_time_data)]
-        number_of_variants = range(1, len(prep_time_data) + 1)
+        layer_data = (1, 2, 5, 8, 11, 15)
+        time_data = (3, 7, 8, 4, 15, 20)
+        result_data = [prep * 2 + elapsed for prep, elapsed in zip(layer_data, time_data)]
+        number_of_variants = range(1, len(time_data) + 1)
 
-        for variant, layers, time, total_time in zip(number_of_variants, prep_time_data, elapsed_time_data, result_data):
+        for variant, layers, time, total_time in zip(number_of_variants, layer_data, time_data, result_data):
             with self.subTest(f"variation #{variant}", layers=layers, time=time, total_time=total_time):
-                self.assertEqual(elapsed_time_in_minutes(layers, time), total_time,
-                                 msg=f'Expected: {time} minutes elapsed, but the timing'
-                                     f' was calculated incorrectly.')
+                failure_msg = f'Expected: {time} minutes elapsed, but the timing'
+                              f' was calculated incorrectly.'
+                self.assertEqual(elapsed_time_in_minutes(layers, time), total_time,msg=failure_msg)
 
 
     def test_docstrings_were_written(self):
