@@ -1,3 +1,4 @@
+
 def estimate_value(budget, exchange_rate):
 	return budget / exchange_rate
 
